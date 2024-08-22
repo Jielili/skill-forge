@@ -1,0 +1,99 @@
+
+
+
+
+1200*2640      5/11    Huawei(P40)                                       0.4545454545
+
+
+1080*2400      9:20    Samsung Galaxy(A70,A80)							 0.45
+                       小米(10Pro,)
+
+1080*2340      9/19.5  Samsung Galaxy(A60,A40s,A8s)						 0.46153846153846156
+                       OnePlus(7,7Pro,6T,)
+                       Oppo(FindX,Reno10,RenoZ,R15x,k3A9,A7x)
+                       小米(CC9,CC9e,9,9Pro,Mix3)
+                       红米(K20,Note7)
+                       Vivo(IY7s,S1Pro,S1,Xx27,iQoo)
+                       HUAWEI(Hova,Mate30,Mate20,P30)
+
+1284*2778      9:19    iphone(14,13,12,11,X)							0.47368421052631576
+1290*2796              Samsung Galaxy(S10e,S10,Note10 5G, 10,)  		
+                       Oppo(A7,AA5)
+                       Vivo(Y91,U1,Z5,Z3)
+
+1440*2960      9/18.5  Samsung Galaxy(S9,S8,Note9)				    	0.486486486486486 
+
+1080*1920      9/18    Google(Pixel3,)
+                       Moto(青轴1s,P30Note)                            	0.5
+
+1242*2208      9:16    iphone(8,7,6s,6,SE,5S,5C)						0.5625
+1440*2560              Google(Pixel,Pixel XL)
+                       Moto(X,5,5X,6,6P)
+              		   Samsung Galaxy(Note5,S5,S7,S6,)
+              		   OnePlus(5,3T)
+              		   Oppo(R9s,R9s Plus,A57,A59s,A37)
+              		   小米(Note3,Note2,6,5s,Max,)
+              		   红米(Note4,4,)
+              		   Vivo(X9)
+              		   HUAWEI(P10)
+
+
+
+
+const result = {
+  "logoColor":"white",
+  "pages":[
+      {
+          "images":{
+              "9_19":"./image/2-1.jpg",
+              "9_16":"./image/2-1.jpg"
+          },
+          "content":"",
+          "color":"",
+          "fontFamily":""
+      },
+      {
+          "images":{
+              "9_19":"./image/2-2.jpg",
+              "9_16":"./image/2-2.jpg"
+          },
+          "content":"亲爱的节莉莉\n今天是个特殊的日子\n因为你的降临\n这一天变得更加美好因为你的到来\nFunPlus变得更加精彩\n祝你生日快乐\n未来的日子，我们继续携手前\nFunPlus",
+          "color":"#0B1A30",
+          "fontFamily":"风雅宋"
+      },
+      {
+          "images":{
+              "9_19":"./image/2-2.jpg",
+              "9_16":"./image/2-2.jpg"
+          },
+          "content":"请到达各职场指定位置\n扫码领取生日福利\n点击查看各职场对应领取位置",
+          "color":"#0B1A30",
+          "fontFamily":"SourceHanSans"
+      }
+  ]
+}
+
+
+
+logoColorOptions:{
+	"white": "白色",
+	"orange": "橙色",
+	"black": "黑色",
+}
+
+fontOptions:{
+	"风雅宋":"风雅宋",
+	"SourceHanSans":"SourceHanSans"
+}
+
+color:要求HEX值，如 "#FFFFFF","#0B1A30"
+
+content:注意需要有换行符号\n
+
+
+
+
+
+
+
+

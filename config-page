@@ -1,0 +1,149 @@
+# 2024-01-09
+为了迅速的完成的增删改查内容，准备做一个配置页面的插件
+次配置页面包含列表查询，新增，修改，删除四个功能。
+
+组件细分给四个部分，
+  1. table展示信息、
+  2. searchbar添加搜索条件
+  3. pagnation分页
+  4. 添加信息的弹窗
+
+整体组件需要参数：
+- columns: 表格的列信息
+- search-bar-items: 搜索条件
+- add-form-items: 添加信息的表单项
+- edit-form-items: 修改信息的表单项
+- searchFunc: 搜索方法
+- addFunc: 添加方法
+- editFunc: 修改方法
+- deleteFun: 删除方法
+
+# search
+1. search 触发条件：
+   - 初始化
+   - 点击搜索按钮
+   - 点击重置按钮
+   - 修改当前页面
+2. search params
+    - page
+    - pageSize
+    - searchParams 
+
+# add 
+1. add 触发条件：
+   - 点击弹窗的确定按钮
+2. add params:
+   从add-form-items中取
+
+# edit
+1. edit 触发条件：
+   - 点击弹窗的确定按钮
+2. edit params:
+   从edit-form-items中取
+
+# delete
+1. delete 触发条件：
+   - 点击删除按钮
+2. delete params:
+   table表格点击项id
+
+
+
+1. table-props
+    - columns, 
+    - data
+
+2. search-bar-props
+    - search-items,
+
+3. pagnation-props
+    - total
+    - page
+    - pageSize
+
+4. add-form-props/edit
+    - add-form-items
+    - edit-form-items
+    - addOrEditType
+    - initData
+
+我开始设想，把add-form-items和edit-form-items中的信息也放到columns中，
+比如，用员工举例
+{
+  title: '员工姓名',
+  dataIndex: 'name',
+  key: 'name',
+  width: 100,
+  addConfig: {
+    type: 'select',
+    options: []
+    placeholder: '请选择员工姓名',
+    required: true,
+  },
+  searchConfig: {
+    type: 'select',
+    options: []
+    placeholder: '请选择员工姓名',
+    required: true,
+  },
+}
+
+{
+  "name": "gongwei-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:prod": "vue-cli-service build",
+    "build:test": "vue-cli-service build --mode sit"
+  },
+  "dependencies": {
+    "ant-design-vue": "^4.1.0",
+    "axios": "^1.6.5",
+    "core-js": "^3.8.3",
+    "moment": "^2.29.1",
+    "vue": "^3.0.4",
+    "vue-i18n": "^9.1.7",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@vue/cli-plugin-babel": "~5.0.0-beta.3",
+    "@vue/cli-plugin-eslint": "~5.0.0-beta.3",
+    "@vue/cli-service": "~5.0.0-beta.3",
+    "@vue/compiler-sfc": "^3.0.4",
+    "babel-plugin-import": "^1.13.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "less": "^4.1.1",
+    "less-loader": "^11.1.4",
+    "vconsole-webpack-plugin": "^1.7.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

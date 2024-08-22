@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="https://funplus-offer-test-oss-proxy.funplus.io/20230419/1681886434557384350.JPG?x-oss-process=image/format,jpg/resize,w_1400" width="720" height="327" data-v-fb7c33b6="">
+  <canvas id="myCanvas" width="720" height="327"></canvas>
+</body>
+</html>
+<script>
+  const url = 'https://funplus-offer-test-oss-proxy.funplus.io/20230419/1681886434557384350.JPG?x-oss-process=image/format,jpg/resize,w_1400'
+  window.onload = () => {
+    const canvas = document.getElementById('myCanvas')
+    const context = canvas.getContext('2d')
+    const imageObj = new Image()
+    imageObj.setAttribute('crossOrigin', 'anonymous');
+    imageObj.src = url
+    imageObj.onload = function () {
+      context.drawImage(imageObj, 0, 0, 720, 327)
+      // imgtest.value = canvas.toDataURL()
+      const imagetest = canvas.toDataURL()
+      // const createEl = document.createElement('a')
+      // createEl.href = imgtest.value
+      // createEl.download = 'download-this-canvas'
+      // createEl.click()
+      // createEl.remove()
+    }
+  }
+  fetch(url).then(res => {
+    console.log(res)
+  })
+</script>
